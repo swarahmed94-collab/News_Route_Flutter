@@ -1,0 +1,32 @@
+News App — Flutter
+==================
+
+المشروع هو سورس Flutter فعلي وليس صورًا فقط.
+
+1) فك الضغط عن ملف ZIP.
+2) افتح فولدر News_Route_Flutter في Android Studio أو VS Code.
+3) تأكد من تثبيت Flutter SDK وAndroid SDK.
+4) من Terminal داخل الفولدر شغّل بالترتيب:
+
+flutter create --platforms=android --project-name=news_route --org=com.newsroute .
+flutter pub get
+flutter run
+
+على ويندوز يمكنك أيضًا تشغيل RUN_ANDROID.bat من CMD بعد تثبيت Flutter.
+
+لربط الأخبار الحقيقية عبر NewsAPI:
+
+flutter run --dart-define=NEWS_API_KEY=مفتاحك_من_newsapi
+
+مهم: المستخدم أرسل رابط Documentation فقط وليس API key، لذلك تم تنفيذ
+الـAPI بالكامل في الكود، مع وضع معاينة من نفس الصور المرسلة عند غياب المفتاح.
+لا يُنشر مفتاح API داخل تطبيق Production؛ استخدم Backend Proxy عند النشر.
+
+كل الصور المستخدمة في التطبيق مقتطعة من ملف التصدير المرفق فقط.
+نسخ الشاشات الأصلية الست عشرة موجودة تحت assets/reference.
+
+للاطلاع على تنظيم المشروع والـAPI اقرأ README.md.
+
+ملحوظة فنية: لم نتمكن من تشغيل Flutter analyze/build في بيئة الإنشاء الحالية
+لعدم توفر Flutter SDK؛ أول خطوة flutter create تستكمل ملفات توليد المنصات
+القياسية. هذا مشروع مصدر وليس ملف APK جاهزًا.
